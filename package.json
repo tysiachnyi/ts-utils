@@ -19,6 +19,7 @@
   ],
   "type": "module",
   "scripts": {
+    "lint": "tsc",
     "dev": "vitest",
     "test": "vitest run",
     "build": "tsc",
