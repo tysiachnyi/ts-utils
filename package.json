@@ -1,0 +1,32 @@
+{
+  "name": "ts-utils",
+  "version": "1.0.0",
+  "description": "A demo package for ts-utils",
+  "keywords": [
+    "typescript"
+  ],
+  "main": "index.js",
+  "homepage": "https://github.com/tysiachnyi/ts-utils",
+  "bugs": {
+    "url": "https://github.com/tysiachnyi/ts-utils/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tysiachnyi/ts-utils.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "ci": "npm run build",
+    "format": "prettier --write ."
+  },
+  "author": "Nik Tysiachnyi <nikita.tysiachnyi@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "prettier": "^3.3.3",
+    "typescript": "^5.5.4"
+  }
+}
