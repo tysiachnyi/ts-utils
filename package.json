@@ -5,7 +5,7 @@
   "keywords": [
     "typescript"
   ],
-  "main": "index.js",
+  "main": "dist/index.js",
   "homepage": "https://github.com/tysiachnyi/ts-utils",
   "bugs": {
     "url": "https://github.com/tysiachnyi/ts-utils/issues"
@@ -19,14 +19,20 @@
   ],
   "type": "module",
   "scripts": {
+    "dev": "vitest",
+    "test": "vitest run",
     "build": "tsc",
-    "ci": "npm run build",
-    "format": "prettier --write ."
+    "ci": "npm run build && npm run check-format && npm run check-exports && npm run lint && npm run test",
+    "format": "prettier --write .",
+    "check-format": "prettier --check .",
+    "check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm"
   },
   "author": "Nik Tysiachnyi <nikita.tysiachnyi@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "@arethetypeswrong/cli": "^0.15.4",
     "prettier": "^3.3.3",
-    "typescript": "^5.5.4"
+    "typescript": "^5.5.4",
+    "vitest": "^2.0.5"
   }
 }
